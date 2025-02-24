@@ -21,6 +21,44 @@ document.addEventListener('click', function(event) {
 
 
 
+// Smooth scroll Menu
+function smoothScroll(e, targetId) {
+  e.preventDefault();
+  const targetElement = document.getElementById(targetId);
+  if (targetElement) {
+      targetElement.scrollIntoView({
+          behavior: 'smooth'
+      });
+  }
+}
+
+function handleMobileClick(e, targetId) {
+  closeMenu();
+  smoothScroll(e, targetId);
+}
+
+function toggleMenu() {
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.toggle('hidden');
+}
+
+function closeMenu() {
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.add('hidden');
+}
+
+// Close menu when clicking outside
+document.addEventListener('click', function(event) {
+  const menu = document.getElementById('mobile-menu');
+  const menuButton = document.getElementById('menu-toggle');
+  
+  if (!menu.contains(event.target) && !menuButton.contains(event.target) && !menu.classList.contains('hidden')) {
+      closeMenu();
+  }
+});
+
+
+
 
 // Email protection function
 function revealEmail(element) {

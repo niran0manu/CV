@@ -16,7 +16,7 @@
     <header class="top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div class="container flex h-14 max-w-screen-2xl items-center justify-between">
             <div class="flex items-center">
-                <a class="flex items-center space-x-2 p-4" href="#home">
+                <a class="flex items-center space-x-2 p-4" href="#home" onclick="smoothScroll(event, 'home')">
                     <span class="font-bold text-xl">NB</span>
                 </a>
             </div>
@@ -34,10 +34,10 @@
     
             <!-- Desktop navigation -->
             <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
-                <a href="#home" class="transition-colors hover:text-foreground/80 hover:underline">Home</a>
-                <a href="#timeline" class="transition-colors hover:text-foreground/80 hover:underline">Timeline</a>
-                <a href="#projects" class="transition-colors hover:text-foreground/80 hover:underline">Projects</a>
-                <a href="#contact" class="transition-colors hover:text-foreground/80 hover:underline">Contact</a>
+                <a href="#home" onclick="smoothScroll(event, 'home')" class="transition-colors hover:text-foreground/80 hover:underline">Home</a>
+                <a href="#timeline" onclick="smoothScroll(event, 'timeline')" class="transition-colors hover:text-foreground/80 hover:underline">Timeline</a>
+                <a href="#projects" onclick="smoothScroll(event, 'projects')" class="transition-colors hover:text-foreground/80 hover:underline">Projects</a>
+                <a href="#contact" onclick="smoothScroll(event, 'contact')" class="transition-colors hover:text-foreground/80 hover:underline">Contact</a>
                 <a href="blog.html" class="transition-colors text-primary hover:text-primary/80 hover:underline">Blog</a>
             </nav>
         </div>
@@ -45,10 +45,10 @@
         <!-- Mobile navigation -->
         <nav id="mobile-menu" class="hidden md:hidden w-full bg-background border-b border-border/40">
             <div class="flex flex-col space-y-4 p-4">
-                <a href="#home" onclick="closeMenu()" class="transition-colors hover:text-foreground/80 hover:underline">Home</a>
-                <a href="#timeline" onclick="closeMenu()" class="transition-colors hover:text-foreground/80 hover:underline">Timeline</a>
-                <a href="#projects" onclick="closeMenu()" class="transition-colors hover:text-foreground/80 hover:underline">Projects</a>
-                <a href="#contact" onclick="closeMenu()" class="transition-colors hover:text-foreground/80 hover:underline">Contact</a>
+                <a href="#home" onclick="handleMobileClick(event, 'home')" class="transition-colors hover:text-foreground/80 hover:underline">Home</a>
+                <a href="#timeline" onclick="handleMobileClick(event, 'timeline')" class="transition-colors hover:text-foreground/80 hover:underline">Timeline</a>
+                <a href="#projects" onclick="handleMobileClick(event, 'projects')" class="transition-colors hover:text-foreground/80 hover:underline">Projects</a>
+                <a href="#contact" onclick="handleMobileClick(event, 'contact')" class="transition-colors hover:text-foreground/80 hover:underline">Contact</a>
                 <a href="blog.html" onclick="closeMenu()" class="transition-colors text-primary hover:text-primary/80 hover:underline">Blog</a>
             </div>
         </nav>
