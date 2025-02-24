@@ -44,7 +44,9 @@
             -webkit-backdrop-filter: blur(10px);
           }
           
-
+          /* #logo{
+            filter: drop-shadow(4px 1px 1px #5a54b8);       
+           } */
 
         .animate-fade-in {
             animation: fadeIn 0.6s ease-out forwards;
